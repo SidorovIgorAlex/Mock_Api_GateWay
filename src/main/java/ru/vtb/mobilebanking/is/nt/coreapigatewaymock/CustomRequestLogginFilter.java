@@ -12,6 +12,8 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
 
 @Component
 public class CustomRequestLogginFilter extends GenericFilterBean {
@@ -28,6 +30,7 @@ public class CustomRequestLogginFilter extends GenericFilterBean {
         try {
             chain.doFilter(currentRequest, servletResponse);
         } finally {
+            logger.info(MapController.resp);
             int status = currentResponse.getStatus();
             logger.info("Response status: {}", status);
         }
