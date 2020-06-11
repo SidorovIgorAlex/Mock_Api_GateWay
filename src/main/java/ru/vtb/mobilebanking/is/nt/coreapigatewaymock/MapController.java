@@ -45,7 +45,6 @@ public class MapController {
         if (!StringUtils.isEmpty(req.getQueryString())) {
             sb.append("?").append(req.getQueryString());
         }
-        resp = responseMap.get(sb.toString());
         return responseMap.get(sb.toString());
     }
 }

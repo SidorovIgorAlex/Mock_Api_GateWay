@@ -30,7 +30,6 @@ public class CustomRequestLogginFilter extends GenericFilterBean {
         try {
             chain.doFilter(currentRequest, servletResponse);
         } finally {
-            logger.info(MapController.resp);
             int status = currentResponse.getStatus();
             logger.info("Response status: {}", status);
         }
