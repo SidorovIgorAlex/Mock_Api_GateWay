@@ -12,7 +12,8 @@ public class Routes {
     }
 
     public static class RouteInfo {
-        private String path, file;
+        private String path, file, delay;
+        //private Double delay;
 
         public String getPath() {
             return path;
@@ -28,6 +29,14 @@ public class Routes {
 
         public void setFile(String file) {
             this.file = file;
+
+        }
+        public String getDelay() {
+            return delay;
+        }
+
+        public void setDelay(String delay) {
+            this.delay = delay;
         }
     }
 }
